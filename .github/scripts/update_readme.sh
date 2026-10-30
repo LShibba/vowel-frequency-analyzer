@@ -2,15 +2,12 @@
 #!/bin/bash
 set -e
 
-# Receive vowel counts and GitHub username
 FREQ_RESULT="$1"
 GITHUB_USER="$2"
-
-# Capture current date and time
+WORKSPACE="$3"
 TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
-# Update README.md
-cat >> /workspace/README.md <<EOF
+cat >> "$WORKSPACE/README.md" <<EOF
 
 ### Vowel Frequency Analysis
 
